@@ -65,7 +65,7 @@ app.use(requestLogger);
 
 app.use(express.static(path.join(__dirname, "client/build")));
 
-app.use("/memes/", memeRouter);
+app.use("/memes", memeRouter);
 
 app.get("/swagger-ui", (req, res, next) => {
   res.redirect("https://app.swaggerhub.com/apis-docs/Kevinpaulose/Xmeme/1.0.2");

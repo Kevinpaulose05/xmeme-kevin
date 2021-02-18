@@ -12,10 +12,7 @@ dotenv.config();
 
 const app = require("./app");
 
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
-);
+const DB = "mongodb://localhost:27017/xmeme";
 
 mongoose
   //.connect(process.env.DATABASE_LOCAL, {
@@ -27,7 +24,7 @@ mongoose
   })
   .then(() => {
     //console.log(con.connections);
-    console.log("DB connection succesful...!");
+    console.log("DB connection successful...!");
   });
 
 const port = process.env.PORT || 3000;
